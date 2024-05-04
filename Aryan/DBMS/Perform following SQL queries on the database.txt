@@ -1,0 +1,42 @@
+CREATE TABLE Students (
+    RollNo INT PRIMARY KEY,
+    Name VARCHAR(100) NOT NULL,
+    Department VARCHAR(100),
+    Year INT,
+    Subject VARCHAR(100),
+    Marks INT
+);
+INSERT INTO Students (RollNo, Name, Department, Year, Subject, Marks) VALUES
+(1, 'Alice', 'CS', 3, 'MicroProcessor', 85),
+(2, 'Bob', 'AIML', 2, 'Database Management', 75),
+(3, 'Charlie', 'AIDS', 4, 'IOT', 90),
+(4, 'David', 'AIML', 3, 'DSA', 80),
+(5, 'Eve', 'CS', 2, 'OOPs', 95);
+ 
+Relational Operators:
+SELECT * FROM Students WHERE Marks > 80;
+SELECT * FROM Students WHERE Subject = 'Database Management';
+
+Boolean Operators:
+SELECT * FROM Students WHERE Name LIKE 'A%' AND Marks > 70;
+SELECT * FROM Students WHERE Department = 'CS' OR Department = 'AIML';
+
+Arithmetic Operations and Built-in Functions:
+SELECT AVG(Marks) FROM Students;
+SELECT COUNT(*) FROM Students;
+SELECT SUM(Marks) FROM Students;
+
+Group Functions:
+SELECT Department, AVG(Marks) FROM Students GROUP BY Department;
+SELECT Year, COUNT(*) FROM Students GROUP BY Year;
+
+Date and Time Functions:
+SELECT CURDATE();
+SELECT YEAR(CURDATE());
+
+Complex Queries and Set Operators:
+SELECT * FROM Students ORDER BY Marks DESC LIMIT 3;
+SELECT DISTINCT Department FROM Students;
+SELECT * FROM Students WHERE (Department = 'CS' OR Department = 'AIDS') AND Marks > 80;
+
+

@@ -1,0 +1,11 @@
+-- Create Students table
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY NOT NULL,
+    Student_Name VARCHAR(100) NOT NULL,
+    Address VARCHAR(200)
+);
+
+ALTER TABLE Students
+ADD MARKS INT;
+
+DROP TABLE Students;
